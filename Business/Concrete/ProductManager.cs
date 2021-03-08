@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -24,15 +25,15 @@ namespace Business.Concrete
             //business codes here
             if (product.ProductName.Length<2)
             {
-                return new ErrorResult("Product Name min 2 character allowing");
+                return new ErrorResult(Messages.ProductNameInvalid);
             }
             _productDal.Add(product);
-            return new SuccessResult("Product Added Succesfully");
+            return new SuccessResult(Messages.ProductAdded);
         }
 
-        public List<Product> GetAll()
+        public IDataResult<List<Product>> GetAll()
         {
-            return _productDal.GetAll();
+            return new DataResult<List<Product>>(_productDal.GetAll(),true,"Products Listed");
         }
 
         public List<Product> GetAllByCategoryId(int id)
@@ -56,6 +57,31 @@ namespace Business.Concrete
         }
 
         IResult IProductService.Add(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        IDataResult<List<Product>> IProductService.GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        IDataResult<List<Product>> IProductService.GetAllByCategoryId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        IDataResult<Product> IProductService.GetById(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        IDataResult<List<Product>> IProductService.GetByUnitPrice(decimal min, decimal max)
+        {
+            throw new NotImplementedException();
+        }
+
+        IDataResult<List<ProductDetailDto>> IProductService.GetProductDetails()
         {
             throw new NotImplementedException();
         }
