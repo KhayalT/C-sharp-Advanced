@@ -14,5 +14,7 @@ namespace Business.Constants
         public static string ProductCountError = "Product count is higher than 10";
 
         public static string ProductNameAlreadyExists = "This Product name already exists";
+
+        public static string CategoryLimitExceded = "The Category count bigger than 15";
     }
 }
