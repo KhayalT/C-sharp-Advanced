@@ -9,7 +9,10 @@ namespace Business.Constants
     {
         public static string ProductAdded = "Product Added";
         public static string ProductNameInvalid = "Your product name is invalid";
-        internal static string MaintenanceTime="Product out of order";
-        internal static string ProductsListed="Product is Listed";
+        public static string MaintenanceTime="Product out of order";
+        public static string ProductsListed="Product is Listed";
+        public static string ProductCountError = "Product count is higher than 10";
+
+        public static string ProductNameAlreadyExists = "This Product name already exists";
     }
 }
