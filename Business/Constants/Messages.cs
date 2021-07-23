@@ -16,5 +16,6 @@ namespace Business.Constants
         public static string ProductNameAlreadyExists = "This Product name already exists";
 
         public static string CategoryLimitExceded = "The Category count bigger than 15";
+        public static string AuthorizationDenied = "Authorization is denied.";
     }
 }
